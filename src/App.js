@@ -1,6 +1,7 @@
 import ImagePreview from "./components/imagePreview";
 import "./App.css";
 import "./global.css";
+import { getRandomImage } from "./utils/api";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       />
     </main>
   );
+}
+async function loadImages() {
+  const images = await getRandomImage();
 }
 
 export default App;
