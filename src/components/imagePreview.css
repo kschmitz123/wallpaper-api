@@ -3,9 +3,10 @@
 }
 .imageThumb {
   width: 40%;
-  margin: 0;
+  margin: 10px;
 }
 
 .imageAuthor {
-  margin: 10px;
+  font-size: 1.2rem;
+  margin: 0;
 }

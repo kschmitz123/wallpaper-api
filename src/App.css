@@ -1,0 +1,10 @@
+main {
+  display: grid;
+  place-items: center;
+}
+.randomBtn {
+  margin-top: 20px;
+  background-color: orange;
+  height: 1.5rem;
+  border-radius: 15px;
+}
