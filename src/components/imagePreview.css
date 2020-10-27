@@ -1,0 +1,12 @@
+.imageContainer {
+  text-align: center;
+}
+.imageThumb {
+  width: 40%;
+  margin: 10px;
+}
+
+.imageAuthor {
+  font-size: 1.2rem;
+  margin: 0;
+}
