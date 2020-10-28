@@ -4,7 +4,8 @@ main {
 }
 .randomBtn {
   margin-top: 20px;
-  background-color: orange;
-  height: 1.5rem;
+  background-color: rgb(65, 65, 65);
+  height: 2rem;
   border-radius: 15px;
+  color: white;
 }
