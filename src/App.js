@@ -4,6 +4,7 @@ import "./App.css";
 import "./global.css";
 import "./api/getRandomImage";
 import { getRandomImage } from "./api/getRandomImage";
+import FavoriteImage from "./components/FavoriteImage";
 
 function App() {
   const [randomImage, setRandomImage] = useState(null);
@@ -25,6 +26,18 @@ function App() {
           id={randomImage.id}
         />
       )}
+      <div className="favorite-container">
+        <FavoriteImage
+          src="https://source.unsplash.com/AZTc9bXx7ko"
+          id="AZTc9bXx7ko"
+          alt="Hallo"
+        />
+        <FavoriteImage
+          src="https://source.unsplash.com/AZTc9bXx7ko"
+          id="AZTc9bXx7ko"
+          alt="Hallo"
+        />
+      </div>
     </main>
   );
 }

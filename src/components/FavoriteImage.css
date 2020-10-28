@@ -1,0 +1,10 @@
+.image-container {
+  height: 200px;
+  width: 300px;
+  margin: 5px;
+}
+
+.favorite-image {
+  height: inherit;
+  width: inherit;
+}

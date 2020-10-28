@@ -3,15 +3,6 @@ import IconButton from "./IconButton";
 import "./imagePreview.css";
 
 export default function ImagePreview({ src, alt, author, id }) {
-  //   function addFavorites(id) {
-  //     let oldFavorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-  //     const isFavorite = oldFavorites.includes(id);
-  //     if (isFavorite) {
-  //       oldFavorites = oldFavorites.filter((favorite) => favorite !== id);
-  //     }
-  //     const newFavorites = [...oldFavorites, id];
-  //     localStorage.setItem("favorites", JSON.stringify(newFavorites));
-  //   }
   return (
     <div className="imageContainer">
       <IconButton
