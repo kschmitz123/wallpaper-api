@@ -1,24 +1,26 @@
 import ImagePreview from "./components/imagePreview";
+import { useState } from "react";
 import "./App.css";
 import "./global.css";
-import { getRandomImage } from "./utils/api";
+import "./api/getRandomImage";
+import { getRandomImage } from "./api/getRandomImage";
 
 function App() {
+  const [wallpaper, setWallpaper] = useState(
+    "https://source.unsplash.com/random"
+  );
+  async function loadImages() {
+    const images = await getRandomImage();
+    setWallpaper(images.urls.regular);
+  }
   return (
     <main>
-      <button className="randomBtn">Get Random Image</button>
-      <ImagePreview
-        src={
-          "https://images.unsplash.com/photo-1603648913629-3b83ed3e6be9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-        }
-        alt={"Decoration"}
-        author={"me"}
-      />
+      <button onClick={() => loadImages()} className="randomBtn">
+        Get Random Image
+      </button>
+      <ImagePreview src={wallpaper} />
     </main>
   );
-}
-async function loadImages() {
-  const images = await getRandomImage();
 }
 
 export default App;
