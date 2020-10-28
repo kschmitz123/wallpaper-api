@@ -6,22 +6,24 @@ import "./api/getRandomImage";
 import { getRandomImage } from "./api/getRandomImage";
 
 function App() {
-  const [wallpaper, setWallpaper] = useState();
-  const [author, setAuthor] = useState();
-  const [altText, setAltText] = useState();
+  const [randomImage, setRandomImage] = useState(null);
 
   async function loadImages() {
-    const images = await getRandomImage();
-    setWallpaper(images.urls.regular);
-    setAuthor(images.user.username);
-    setAltText(images.alt_description);
+    const randomImageResponse = await getRandomImage();
+    setRandomImage(randomImageResponse);
   }
   return (
     <main>
       <button onClick={() => loadImages()} className="randomBtn">
         Get Random Image
       </button>
-      <ImagePreview src={wallpaper} alt={altText} author={author} />
+      {randomImage && (
+        <ImagePreview
+          src={randomImage.urls.regular}
+          alt={randomImage.alt_description}
+          author={randomImage.user.name}
+        />
+      )}
     </main>
   );
 }
