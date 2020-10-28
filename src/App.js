@@ -6,19 +6,20 @@ import "./api/getRandomImage";
 import { getRandomImage } from "./api/getRandomImage";
 
 function App() {
-  const [wallpaper, setWallpaper] = useState(
-    "https://source.unsplash.com/random"
-  );
+  const [wallpaper, setWallpaper] = useState();
+  const [author, setAuthor] = useState();
+
   async function loadImages() {
     const images = await getRandomImage();
     setWallpaper(images.urls.regular);
+    setAuthor(images.user.username);
   }
   return (
     <main>
       <button onClick={() => loadImages()} className="randomBtn">
         Get Random Image
       </button>
-      <ImagePreview src={wallpaper} />
+      <ImagePreview src={wallpaper} author={author} />
     </main>
   );
 }
