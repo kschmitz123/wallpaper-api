@@ -1,8 +1,15 @@
 import "./FavoriteImage.css";
-export default function FavoriteImage({ src, id, alt }) {
+import IconButton from "./IconButton";
+
+export default function FavoriteImage({ photoId }) {
   return (
     <div className="image-container">
-      <img className="favorite-image" src={src} alt={alt} id={id} />
+      <IconButton>🤍</IconButton>
+      <img
+        className="favorite-image"
+        src={`https://source.unsplash.com/${photoId}`}
+        alt={"hallo"}
+      />
     </div>
   );
 }

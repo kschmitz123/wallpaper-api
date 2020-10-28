@@ -27,16 +27,8 @@ function App() {
         />
       )}
       <div className="favorite-container">
-        <FavoriteImage
-          src="https://source.unsplash.com/AZTc9bXx7ko"
-          id="AZTc9bXx7ko"
-          alt="Hallo"
-        />
-        <FavoriteImage
-          src="https://source.unsplash.com/AZTc9bXx7ko"
-          id="AZTc9bXx7ko"
-          alt="Hallo"
-        />
+        <FavoriteImage photoId="AZTc9bXx7ko" />
+        <FavoriteImage photoId="6-M4HAg6hlM" />
       </div>
     </main>
   );
