@@ -1,8 +1,17 @@
 .imageContainer {
-  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+  max-width: 300px;
+}
+
+.imageContainer > .icon-btn {
+  position: absolute;
+  top: 15px;
+  right: 5px;
 }
 .imageThumb {
-  width: 70%;
+  width: 100%;
   margin: 10px;
 }
 
