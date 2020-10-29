@@ -5,6 +5,7 @@ import "./global.css";
 import "./api/getRandomImage";
 import { getRandomImage } from "./api/getRandomImage";
 import FavoriteImageList from "./components/FavoriteImageList";
+import without from "./api/arrays";
 
 function App() {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
