@@ -5,15 +5,16 @@ import "./global.css";
 import "./api/getRandomImage";
 import { getRandomImage } from "./api/getRandomImage";
 import FavoriteImageList from "./components/FavoriteImageList";
+import { getFavorites } from "./api/storage";
 
 function App() {
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   const [randomImage, setRandomImage] = useState(null);
 
   async function loadImages() {
     const randomImageResponse = await getRandomImage();
     setRandomImage(randomImageResponse);
   }
+  const favorites = getFavorites();
   return (
     <main>
       <button onClick={() => loadImages()} className="randomBtn">
