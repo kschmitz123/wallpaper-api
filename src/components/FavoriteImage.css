@@ -1,9 +1,7 @@
 .image-container {
-  height: 200px;
-  width: 300px;
-  margin: 5px;
-  display: grid;
-  place-items: center;
+  max-height: 300px;
+  width: 200px;
+  margin-left: 10px;
   position: relative;
 }
 .image-container > .icon-btn {
@@ -12,6 +10,6 @@
   right: 5px;
 }
 .favorite-image {
-  height: inherit;
+  height: auto;
   width: inherit;
 }

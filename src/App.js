@@ -4,7 +4,8 @@ import "./App.css";
 import "./global.css";
 import "./api/getRandomImage";
 import { getRandomImage } from "./api/getRandomImage";
-import FavoriteImage from "./components/FavoriteImage";
+import FavoriteImageList from "./components/FavoriteImageList";
+import { getFavorites } from "./api/storage";
 
 function App() {
   const [randomImage, setRandomImage] = useState(null);
@@ -13,6 +14,7 @@ function App() {
     const randomImageResponse = await getRandomImage();
     setRandomImage(randomImageResponse);
   }
+  const favorites = getFavorites();
   return (
     <main>
       <button onClick={() => loadImages()} className="randomBtn">
@@ -26,10 +28,7 @@ function App() {
           id={randomImage.id}
         />
       )}
-      <div className="favorite-container">
-        <FavoriteImage photoId="AZTc9bXx7ko" />
-        <FavoriteImage photoId="6-M4HAg6hlM" />
-      </div>
+      <FavoriteImageList photoIds={favorites} />
     </main>
   );
 }
