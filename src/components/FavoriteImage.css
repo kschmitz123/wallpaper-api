@@ -1,5 +1,5 @@
 .image-container {
-  height: 100%;
+  max-height: 300px;
   width: 200px;
   margin-left: 10px;
   position: relative;
@@ -10,6 +10,6 @@
   right: 5px;
 }
 .favorite-image {
-  height: inherit;
+  height: auto;
   width: inherit;
 }
