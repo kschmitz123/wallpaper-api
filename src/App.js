@@ -7,6 +7,7 @@ import { getRandomImage } from "./api/getRandomImage";
 import FavoriteImageList from "./components/FavoriteImageList";
 
 function App() {
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   const [randomImage, setRandomImage] = useState(null);
 
   async function loadImages() {
@@ -27,9 +28,7 @@ function App() {
         />
       )}
       <div className="favorite-container">
-        <FavoriteImageList />
-        {/* <FavoriteImage photoId="AZTc9bXx7ko" />
-        <FavoriteImage photoId="6-M4HAg6hlM" /> */}
+        <FavoriteImageList photoIds={favorites} />
       </div>
     </main>
   );
