@@ -9,3 +9,9 @@ main {
   border-radius: 15px;
   color: white;
 }
+
+.favorite-container {
+  margin-top: 50px;
+  height: 200px;
+  display: flex;
+}
