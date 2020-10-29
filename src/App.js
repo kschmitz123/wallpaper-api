@@ -27,9 +27,7 @@ function App() {
           id={randomImage.id}
         />
       )}
-      <div className="favorite-container">
-        <FavoriteImageList photoIds={favorites} />
-      </div>
+      <FavoriteImageList photoIds={favorites} />
     </main>
   );
 }
