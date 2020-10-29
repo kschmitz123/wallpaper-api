@@ -8,11 +8,8 @@ export default function FavoriteImage({ photoId }) {
       <IconButton
         onClick={() => {
           let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-          const isFavorite = favorites.includes(photoId);
-          if (isFavorite) {
-            favorites = without(favorites, photoId);
-            localStorage.setItem("favorites", JSON.stringify(favorites));
-          }
+          favorites = without(favorites, photoId);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
         }}
       >
         🤍

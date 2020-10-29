@@ -1,9 +1,7 @@
 .image-container {
-  height: 200px;
-  width: 300px;
-  margin: 5px;
-  display: grid;
-  place-items: center;
+  height: 100%;
+  width: 200px;
+  margin-left: 10px;
   position: relative;
 }
 .image-container > .icon-btn {

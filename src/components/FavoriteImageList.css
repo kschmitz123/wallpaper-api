@@ -1,5 +1,7 @@
 .favorite-container {
   margin-top: 50px;
-  height: 200px;
+  max-height: 300px;
   display: flex;
+  overflow-x: auto;
+  width: 100%;
 }
